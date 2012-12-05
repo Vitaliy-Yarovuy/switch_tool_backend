@@ -11,7 +11,24 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121127204003) do
+ActiveRecord::Schema.define(:version => 20121205202942) do
+
+  create_table "medicaments", :force => true do |t|
+    t.string   "name"
+    t.integer  "drug_form"
+    t.string   "small_description"
+    t.text     "big_description"
+    t.text     "medical_evidence"
+    t.text     "dosage_form"
+    t.text     "trade_names"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+  end
+
+  create_table "medicaments_symptoms", :id => false, :force => true do |t|
+    t.integer "medicament_id"
+    t.integer "symptom_id"
+  end
 
   create_table "rails_admin_histories", :force => true do |t|
     t.text     "message"
