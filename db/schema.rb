@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121205202942) do
+ActiveRecord::Schema.define(:version => 20121212145230) do
 
   create_table "medicaments", :force => true do |t|
     t.string   "name"
@@ -43,11 +43,38 @@ ActiveRecord::Schema.define(:version => 20121205202942) do
 
   add_index "rails_admin_histories", ["item", "table", "month", "year"], :name => "index_rails_admin_histories"
 
+  create_table "replacement_recommendations", :force => true do |t|
+    t.integer  "medicament_id_from"
+    t.integer  "medicament_id_to"
+    t.boolean  "is_exchangeable"
+    t.text     "description"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
+
   create_table "symptoms", :force => true do |t|
     t.string   "name"
     t.string   "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+  end
+
+  create_table "treatment_groups", :force => true do |t|
+    t.string   "name"
+    t.integer  "symptom_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "treatments", :force => true do |t|
+    t.integer  "treatment_group_id"
+    t.string   "name"
+    t.integer  "medicament_id"
+    t.boolean  "is_more_than_21"
+    t.integer  "dose_by_taking"
+    t.integer  "admission_per_day"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
   end
 
   create_table "users", :force => true do |t|
