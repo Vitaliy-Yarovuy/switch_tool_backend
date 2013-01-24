@@ -11,6 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
+
 ActiveRecord::Schema.define(:version => 20121215211519) do
 
   create_table "data_base_snapshots", :force => true do |t|
@@ -29,11 +30,6 @@ ActiveRecord::Schema.define(:version => 20121215211519) do
     t.text     "trade_names"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
-  end
-
-  create_table "medicaments_symptoms", :id => false, :force => true do |t|
-    t.integer "medicament_id"
-    t.integer "symptom_id"
   end
 
   create_table "rails_admin_histories", :force => true do |t|

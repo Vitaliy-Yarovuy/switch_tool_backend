@@ -5,7 +5,10 @@ SwitchToolBackend::Application.routes.draw do
 
   root :to => "pages#home"
 
+  #map.resources '/symptoms/show_photo/:id', :controller => 'symtoms', :action => 'show_photo'
 
+  resources :symtoms
+  match '/symptoms/show_photo/:id/:style',  :to => 'symtoms#show_photo'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
