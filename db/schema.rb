@@ -11,8 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-
-ActiveRecord::Schema.define(:version => 20121215211519) do
+ActiveRecord::Schema.define(:version => 20130125084037) do
 
   create_table "data_base_snapshots", :force => true do |t|
     t.string   "notice"
@@ -57,7 +56,7 @@ ActiveRecord::Schema.define(:version => 20121215211519) do
   create_table "symptom_photos", :force => true do |t|
     t.integer "symptom_id"
     t.string  "style"
-    t.binary  "file_contents"
+    t.text    "file_contents"
   end
 
   create_table "symptoms", :force => true do |t|

@@ -10,7 +10,7 @@ gem 'sqlite3'
 gem 'devise'
 gem 'rails_admin'
 gem "paperclip", "~> 3.0"
-gem "paperclip_database", "~> 1.0"
+#gem "paperclip_database", "~> 1.0"
 
 # Gems used only for assets and not required
 # in production environments by default.
