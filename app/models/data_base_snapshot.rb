@@ -1,7 +1,16 @@
 class DataBaseSnapshot < ActiveRecord::Base
+  include ApplicationHelper
+
   attr_accessible :notice
 
-  attr_accessible :snap_file
-  has_attached_file :snap_file
+  before_create :create_snap
+
+  private
+
+  def create_snap
+     export_to_db
+     ActiveRecord::Base.logger.info("[DataBaseSnapshot] create_snap")
+
+  end
 
 end
