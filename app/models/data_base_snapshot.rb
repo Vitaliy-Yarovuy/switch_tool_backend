@@ -3,7 +3,7 @@ class DataBaseSnapshot < ActiveRecord::Base
 
   attr_accessible :notice
 
-  before_create :create_snap
+  after_commit :create_snap
 
   private
 
