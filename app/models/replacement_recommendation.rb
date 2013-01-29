@@ -5,5 +5,4 @@ class ReplacementRecommendation < ActiveRecord::Base
   attr_accessible :description, :is_exchangeable, :medicament_id_from, :medicament_id_to
   attr_accessible :medicament_ids
 
-
 end

@@ -13,13 +13,13 @@ user = User.create({email: "v@v.ua", password: "111111", password_confirmation: 
 
 
 symptoms = Symptom.create([
-    {name: 'Простуда', description:'Головная боль Раздражение  слизистых  Температура Ломота'},
-    {name: 'Лихорадка', description:'Жар Температура Ломота'},
-    {name: 'Боли  в сердце', description:'Головная боль Раздражение'},
-    {name: 'Мигрень', description:'Усталость  Температура Ломота'},
-    {name: 'Боли  в животе', description:'Температура Ломота'},
-    {name: 'Температура', description:'Усталость Температура Ломота'},
-    {name: 'Звон в ушах', description:'Ломота'},
+    {name: 'Простуда', description:'Головная боль Раздражение  слизистых  Температура Ломота', photo: File.open('C:\win8\switch-tool-win8\switch-tool-win8\switch-tool-win8\images\simptoms\simptom_1.png')},
+    {name: 'Лихорадка', description:'Жар Температура Ломота', photo: File.open('C:\win8\switch-tool-win8\switch-tool-win8\switch-tool-win8\images\simptoms\simptom_2.png')},
+    {name: 'Боли  в сердце', description:'Головная боль Раздражение', photo: File.open('C:\win8\switch-tool-win8\switch-tool-win8\switch-tool-win8\images\simptoms\simptom_3.png')},
+    {name: 'Мигрень', description:'Усталость  Температура Ломота', photo: File.open('C:\win8\switch-tool-win8\switch-tool-win8\switch-tool-win8\images\simptoms\simptom_4.png')},
+    {name: 'Боли  в животе', description:'Температура Ломота', photo: File.open('C:\win8\switch-tool-win8\switch-tool-win8\switch-tool-win8\images\simptoms\simptom_5.png')},
+    {name: 'Температура', description:'Усталость Температура Ломота', photo: File.open('C:\win8\switch-tool-win8\switch-tool-win8\switch-tool-win8\images\simptoms\simptom_6.png')},
+    {name: 'Звон в ушах', description:'Ломота', photo: File.open('C:\win8\switch-tool-win8\switch-tool-win8\switch-tool-win8\images\simptoms\simptom_7.png')},
 ])
 
 medicaments = Medicament.create([
