@@ -38,4 +38,7 @@ SwitchToolBackend::Application.configure do
 
   # for desire
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+  #path to dbs
+  config.dbs_public_path = "dbs/"
 end
