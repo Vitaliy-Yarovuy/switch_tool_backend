@@ -1,4 +1,6 @@
 SwitchToolBackend::Application.routes.draw do
+  resources :snapshot
+  resources :symtoms
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
   devise_for :users
@@ -7,7 +9,7 @@ SwitchToolBackend::Application.routes.draw do
 
   #map.resources '/symptoms/show_photo/:id', :controller => 'symtoms', :action => 'show_photo'
 
-  resources :symtoms
+  match '/snapshot/',  :to => 'snapshot#index'
   match '/symptoms/show_photo/:id/:style',  :to => 'symtoms#show_photo'
 
   # The priority is based upon order of creation:

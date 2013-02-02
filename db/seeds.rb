@@ -10,7 +10,7 @@
 #require Rails.root.join("extras\\paperclip_database_base64\\paperclip_database_base64")
 
 user = User.create({email: "v@v.ua", password: "111111", password_confirmation: "111111"})
-img_path = "C:\\win8\\switch-tool-win8\\switch-tool-win8\\switch-tool-win8\\images\\simptoms\\"
+img_path = Rails.root.join("extras/content/simptoms/")
 
 texts =[
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fermentum odio vel massa volutpat mollis. Phasellus dapibus auctor elit, porta egestas nisl rhoncus eleifend. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec tristique venenatis rhoncus. Pellentesque eu ligula magna, eu rhoncus enim. Proin quis nibh nulla, non mollis augue. Fusce sodales feugiat magna, et varius lacus adipiscing sagittis. Aenean aliquam velit eget justo consectetur ut iaculis diam vulputate. Nunc id odio at nunc consectetur semper vitae vestibulum odio. Phasellus sit amet lacus at metus rhoncus cursus. Vivamus posuere lacus eget sem porta vitae consectetur tellus suscipit. Vestibulum nec felis sapien. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales condimentum enim quis auctor. Praesent magna urna, pellentesque vitae sodales non, scelerisque ut nibh.",
