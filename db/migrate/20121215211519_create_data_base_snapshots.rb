@@ -5,11 +5,5 @@ class CreateDataBaseSnapshots < ActiveRecord::Migration
       t.timestamps
     end
   end
-  def self.up
-    add_attachment :data_base_snapshots, :snap_file
-  end
 
-  def self.down
-    remove_attachment :data_base_snapshots, :snap_file
-  end
 end

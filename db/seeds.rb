@@ -7,7 +7,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-require Rails.root.join("extras\\paperclip_database_base64\\paperclip_database_base64")
+#require Rails.root.join("extras\\paperclip_database_base64\\paperclip_database_base64")
 
 user = User.create({email: "v@v.ua", password: "111111", password_confirmation: "111111"})
 img_path = "C:\\win8\\switch-tool-win8\\switch-tool-win8\\switch-tool-win8\\images\\simptoms\\"
