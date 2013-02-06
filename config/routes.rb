@@ -3,7 +3,7 @@ SwitchToolBackend::Application.routes.draw do
   resources :symtoms
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
-  devise_for :users
+  devise_for :users, :controllers => { :sign_in => 'login' }
 
   root :to => "pages#home"
 

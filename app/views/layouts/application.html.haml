@@ -10,22 +10,4 @@
     = csrf_meta_tags
   %body
     .page
-      %section.round
-        - flash.each do |key, value|
-          %div( class ="flash #{key}" )= value
-      #user_login_box
-        - if user_signed_in?
-          = current_user.email
-          |
-          = link_to 'My info', edit_user_registration_path
-          |
-          = link_to 'Sign out', destroy_user_session_path, :method => :delete
-        - else
-          = link_to 'Sign up', new_user_registration_path
-          |
-          = link_to 'Sign in', new_user_session_path
-      .links
-        = link_to "#GO_HOME", root_path
-        ||
-        = link_to "#GO_ADMIN", rails_admin_path
       = yield

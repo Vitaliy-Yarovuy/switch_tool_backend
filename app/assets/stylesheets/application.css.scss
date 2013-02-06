@@ -1,18 +1,37 @@
+html, body{
+  height: 100%;
+}
+
+body{
+  background: #f9f9f9 url(falloutboy.png) right bottom no-repeat;
+  padding-top: 1px;
+  margin-top: -1px;
+}
+
 .page{
-  width: 940px;
-  margin: 0 auto;
-  background: #ffffee;
-  overflow: hidden;
-  position: relative;
+  margin: 150px auto 0;
+  margin-bottom: 100px;
+  text-align: left;
+  width: 300px;
+  padding: 25px;
+  background: #fff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
 }
 
-.links{
-  font-size: 30px;
-  padding: 5px;
+
+.page input[type="password"],
+.page input[type="email"],
+.page input[type="text"]{
+  border: 1px solid #d9d9d9;
+  color: #3b3b3b;
+  line-height: 27px;
+  height: 27px;
+  width: 100%;
 }
 
-#user_login_box{
-  position: absolute;
-  right: 20px;
-  top:10px;
+.page input{
+  margin-bottom: 6px;
 }

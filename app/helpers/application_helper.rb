@@ -23,6 +23,7 @@ module ApplicationHelper
     new_spec["database"] = "public/" + Rails.application.config.dbs_public_path + db_name;
     ActiveRecord::Base.establish_connection new_spec #:publishing
     ActiveRecord::Migrator.migrate("db/migrate/", nil)
+    ActiveRecord::Migrator.migrate("db/clear_db_midration/", nil)
 
     copy_obj(symptoms, Symptom, %w[created_at updated_at], %w[photo_file_name photo_content_type photo_file_size photo_updated_at]) { |new_o, index|
       new_o.photo = symptoms_photos[index]
