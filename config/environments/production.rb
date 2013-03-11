@@ -15,7 +15,7 @@ SwitchToolBackend::Application.configure do
   config.assets.compress = true
 
   # Don't fallback to assets pipeline if a precompiled asset is missed
-  config.assets.compile = true
+  config.assets.compile = false
 
   # Generate digests for assets URLs
   config.assets.digest = true
@@ -67,4 +67,5 @@ SwitchToolBackend::Application.configure do
 
   #path to dbs
   config.dbs_public_path = "dbs/"
+
 end
