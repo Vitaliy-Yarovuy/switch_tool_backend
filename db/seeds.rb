@@ -43,6 +43,8 @@ end
 text_gen = CircleEnumerator.new(texts).to_enum
 dose_gen = CircleEnumerator.new([1,2,3,4]).to_enum
 admission_gen = CircleEnumerator.new([1,2,3]).to_enum
+mg_dose_gen = CircleEnumerator.new([10,20,30,45,50]).to_enum
+is_allow_gen = CircleEnumerator.new([true,false]).to_enum
 
 
 symptoms = Symptom.create([
@@ -56,13 +58,13 @@ symptoms = Symptom.create([
 ])
 
 medicaments = Medicament.create([
-    {name: 'Ацетилсалициловая кислота', small_description:'противовоспалительное,  обезбаливающее средство', drug_form: 1, big_description: text_gen.next , dosage_form: text_gen.next, medical_evidence: text_gen.next, trade_names: text_gen.next},
-    {name: 'Анальгин', small_description:'лекарственное средство, анальгетик  и антипиретик', drug_form: 2, big_description: text_gen.next , dosage_form: text_gen.next, medical_evidence: text_gen.next, trade_names: text_gen.next},
-    {name: 'Виагра', small_description:'восстанавливает нормальную реак- цию на сексуальное возбуждение', drug_form: 3, big_description: text_gen.next , dosage_form: text_gen.next, medical_evidence: text_gen.next, trade_names: text_gen.next},
-    {name: 'Метамизо́л на́трия', small_description:'лекарственное средство, анальгетик  и антипиретик', drug_form: 2, big_description: text_gen.next , dosage_form: text_gen.next, medical_evidence: text_gen.next, trade_names: text_gen.next},
-    {name: 'Кеторола́к', small_description:'нестероидный противовоспалитель- ный препарат', drug_form: 1, big_description: text_gen.next , dosage_form: text_gen.next, medical_evidence: text_gen.next, trade_names: text_gen.next},
-    {name: 'Дюфалак', small_description:'слабительное средство, употребля- еться при расстройствах желудка', drug_form: 2, big_description: text_gen.next , dosage_form: text_gen.next, medical_evidence: text_gen.next, trade_names: text_gen.next},
-    {name: 'Активированный уголь', small_description:'Дезинтоксикация при экзо- и эндоген- ных интоксикациях: диспепсия, метео- ризм, процессы гниения, брожения', drug_form: 1, big_description: text_gen.next , dosage_form: text_gen.next, medical_evidence: text_gen.next, trade_names: text_gen.next},
+    {name: 'Ацетилсалициловая кислота', small_description:'противовоспалительное,  обезбаливающее средство', drug_form: 1, big_description: text_gen.next , dosage_form: text_gen.next, medical_evidence: text_gen.next, trade_names: text_gen.next, mg_dose: mg_dose_gen.next, is_allowed_with_other: is_allow_gen.next},
+    {name: 'Анальгин', small_description:'лекарственное средство, анальгетик  и антипиретик', drug_form: 2, big_description: text_gen.next , dosage_form: text_gen.next, medical_evidence: text_gen.next, trade_names: text_gen.next, mg_dose: mg_dose_gen.next, is_allowed_with_other: is_allow_gen.next},
+    {name: 'Виагра', small_description:'восстанавливает нормальную реак- цию на сексуальное возбуждение', drug_form: 3, big_description: text_gen.next , dosage_form: text_gen.next, medical_evidence: text_gen.next, trade_names: text_gen.next, mg_dose: mg_dose_gen.next, is_allowed_with_other: is_allow_gen.next},
+    {name: 'Метамизо́л на́трия', small_description:'лекарственное средство, анальгетик  и антипиретик', drug_form: 2, big_description: text_gen.next , dosage_form: text_gen.next, medical_evidence: text_gen.next, trade_names: text_gen.next, mg_dose: mg_dose_gen.next, is_allowed_with_other: is_allow_gen.next},
+    {name: 'Кеторола́к', small_description:'нестероидный противовоспалитель- ный препарат', drug_form: 1, big_description: text_gen.next , dosage_form: text_gen.next, medical_evidence: text_gen.next, trade_names: text_gen.next, mg_dose: mg_dose_gen.next, is_allowed_with_other: is_allow_gen.next},
+    {name: 'Дюфалак', small_description:'слабительное средство, употребля- еться при расстройствах желудка', drug_form: 2, big_description: text_gen.next , dosage_form: text_gen.next, medical_evidence: text_gen.next, trade_names: text_gen.next, mg_dose: mg_dose_gen.next, is_allowed_with_other: is_allow_gen.next},
+    {name: 'Активированный уголь', small_description:'Дезинтоксикация при экзо- и эндоген- ных интоксикациях: диспепсия, метео- ризм, процессы гниения, брожения', drug_form: 1, big_description: text_gen.next , dosage_form: text_gen.next, medical_evidence: text_gen.next, trade_names: text_gen.next, mg_dose: mg_dose_gen.next, is_allowed_with_other: is_allow_gen.next},
 ])
 
 treatmentsForFirst = Treatment.create([

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130130135621) do
+ActiveRecord::Schema.define(:version => 20130330204951) do
 
   create_table "data_base_snapshots", :force => true do |t|
     t.string   "notice"
@@ -28,8 +28,10 @@ ActiveRecord::Schema.define(:version => 20130130135621) do
     t.text     "medical_evidence"
     t.text     "dosage_form"
     t.text     "trade_names"
-    t.datetime "created_at",        :null => false
-    t.datetime "updated_at",        :null => false
+    t.datetime "created_at",                               :null => false
+    t.datetime "updated_at",                               :null => false
+    t.boolean  "is_allowed_with_other", :default => false
+    t.integer  "mg_dose"
   end
 
   create_table "rails_admin_histories", :force => true do |t|
