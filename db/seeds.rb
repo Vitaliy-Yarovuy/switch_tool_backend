@@ -57,6 +57,7 @@ symptoms = Symptom.create([
     {name: 'Звон в ушах', description:'Ломота', photo: File.open(img_path+'simptom_7.png')},
 ])
 
+
 medicaments = Medicament.create([
     {name: 'Ацетилсалициловая кислота', small_description:'противовоспалительное,  обезбаливающее средство', drug_form: 1, big_description: text_gen.next , dosage_form: text_gen.next, medical_evidence: text_gen.next, trade_names: text_gen.next, mg_dose: mg_dose_gen.next, is_allowed_with_other: is_allow_gen.next},
     {name: 'Анальгин', small_description:'лекарственное средство, анальгетик  и антипиретик', drug_form: 2, big_description: text_gen.next , dosage_form: text_gen.next, medical_evidence: text_gen.next, trade_names: text_gen.next, mg_dose: mg_dose_gen.next, is_allowed_with_other: is_allow_gen.next},
@@ -120,5 +121,6 @@ treatmentGroups = TreatmentGroup.create([
     {name: "group 4", treatments: treatmentsForFour, symptom: symptoms[3]},
     {name: "group 5", treatments: treatmentsForFive, symptom: symptoms[4]},
     {name: "group 6", treatments: treatmentsForSix, symptom: symptoms[5]},
-    {name: "group 7", treatments: treatmentsForSeven, symptom: symptoms[6]},
+    {name: "group 7", treatments: treatmentsForSecond, symptom: symptoms[1]},
+    {name: "group 8", treatments: treatmentsForSeven, symptom: symptoms[6]}
 ])
